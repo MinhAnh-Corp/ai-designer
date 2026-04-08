@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "allow": [
+      "Bash(*)",
+      "Read(*)",
+      "Write(*)",
+      "Edit(*)",
+      "Glob(*)",
+      "Grep(*)",
+      "NotebookEdit(*)",
+      "WebFetch(*)",
+      "WebSearch(*)",
+      "Agent(*)",
+      "TodoWrite(*)",
+      "mcp__ai_designer__*",
+      "mcp__parallel_orchestrator__*",
+      "mcp__context7__*",
+      "mcp__figma__*"
+    ]
+  },
+  "mcpServers": {
+    "ai-designer": {
+      "command": "node",
+      "args": ["<HOME>/.qwen/mcp/ai-designer/server.js"]
+    },
+    "parallel-orchestrator": {
+      "command": "node",
+      "args": ["<HOME>/.claude/mcp/parallel-orchestrator/server.js"]
+    },
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp@latest"]
+    },
+    "figma": {
+      "command": "npx",
+      "args": ["-y", "@anthropic-ai/figma-mcp@latest"],
+      "env": {
+        "FIGMA_ACCESS_TOKEN": "<YOUR_FIGMA_TOKEN>"
+      }
+    }
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "",
+        "command": "bash -c 'echo \"🎨 AI Designer MCP loaded. Use discover_business tool to start designing.\"'"
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "matcher": "design|ui|component|layout|frontend|page|website|app",
+        "command": "bash -c 'echo \"💡 Design request detected. Use discover_business first, then discover_pages, scaffold_project, design_generate.\"'"
+      }
+    ]
+  }
+}

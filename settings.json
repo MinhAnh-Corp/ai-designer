@@ -1,0 +1,42 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(*)",
+      "Read(*)",
+      "Write(*)",
+      "Edit(*)",
+      "Glob(*)",
+      "Grep(*)",
+      "WebFetch(*)",
+      "WebSearch(*)",
+      "Agent(*)",
+      "TodoWrite(*)",
+      "mcp__ai_designer__*",
+      "mcp__parallel_orchestrator__*"
+    ]
+  },
+  "mcpServers": {
+    "ai-designer": {
+      "command": "node",
+      "args": ["<PROJECT_PATH>/MCP/ai-designer/server.js"]
+    },
+    "parallel-orchestrator": {
+      "command": "node",
+      "args": ["<HOME>/.claude/mcp/parallel-orchestrator/server.js"]
+    }
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "",
+        "command": "bash -c 'echo \"💡 AI Designer loaded. Use design_discovery tool to start designing.\"'"
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "matcher": "design|ui|component|layout|frontend",
+        "command": "bash -c 'echo \"🎨 Design request detected. Consider using design_discovery first.\"'"
+      }
+    ]
+  }
+}

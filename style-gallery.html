@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Designer - Style Gallery</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/antd@5.12.8/dist/reset.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    body { font-family: 'Inter', -apple-system, sans-serif; }
+    
+    /* Style Previews */
+    .style-card { cursor: pointer; transition: all 0.3s ease; }
+    .style-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.15); }
+    .style-card.selected { ring: 4px; ring-color: #1677ff; }
+    
+    /* Glassmorphism */
+    .glass { background: rgba(255,255,255,0.15); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.3); }
+    
+    /* Neumorphism */
+    .neumorphic { background: #e0e5ec; box-shadow: 8px 8px 16px #b8bec7, -8px -8px 16px #ffffff; border-radius: 16px; }
+    .neumorphic-inset { box-shadow: inset 4px 4px 8px #b8bec7, inset -4px -4px 8px #ffffff; }
+    
+    /* Brutalism */
+    .brutalist { border: 3px solid #000; box-shadow: 6px 6px 0 #000; }
+    
+    /* Gradient Mesh */
+    .gradient-mesh { background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%); }
+    
+    /* Aurora */
+    .aurora { background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%); }
+    
+    /* Clay */
+    .clay { background: #f5f0e8; border-radius: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+    
+    /* Retro */
+    .retro { background: #fff8dc; border: 2px solid #daa520; font-family: 'Georgia', serif; }
+    
+    /* Holographic */
+    .holographic { background: linear-gradient(135deg, #ff00cc, #333399, #00ffcc, #ff00cc); background-size: 400% 400%; animation: holographic 8s ease infinite; }
+    @keyframes holographic { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
+    
+    /* Bento Grid */
+    .bento { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    
+    /* Tab Active State */
+    .tab-active { background: #1677ff; color: white; }
+    .tab-inactive { background: #f5f5f5; color: #666; }
+    .tab-inactive:hover { background: #e8e8e8; }
+  </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+  <!-- Header -->
+  <div class="bg-white border-b border-gray-200 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4">
+      <h1 class="text-2xl font-bold text-gray-900">🎨 AI Designer - Style Gallery</h1>
+      <p class="text-gray-600 mt-1">Click on any style to select it. Copy the style name when you're ready.</p>
+    </div>
+  </div>
+
+  <!-- Platform Selector -->
+  <div class="max-w-7xl mx-auto px-6 py-8">
+    <h2 class="text-lg font-semibold mb-4">1. Select Platform</h2>
+    <div class="flex gap-4 mb-8">
+      <button onclick="selectPlatform('web')" id="btn-web" class="tab-active px-6 py-3 rounded-lg font-medium transition">
+        🌐 Website
+      </button>
+      <button onclick="selectPlatform('app')" id="btn-app" class="tab-inactive px-6 py-3 rounded-lg font-medium transition">
+        📱 Mobile App
+      </button>
+      <button onclick="selectPlatform('both')" id="btn-both" class="tab-inactive px-6 py-3 rounded-lg font-medium transition">
+        🔄 Both (Responsive)
+      </button>
+    </div>
+
+    <!-- Design System Selector -->
+    <h2 class="text-lg font-semibold mb-4">2. Select Design System</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+      <a href="https://ant.design/components/overview/" target="_blank" class="style-card bg-white p-4 rounded-lg border-2 border-gray-200 hover:border-blue-500">
+        <div class="text-2xl mb-2">🎯</div>
+        <div class="font-semibold">Ant Design</div>
+        <div class="text-sm text-gray-600">Enterprise UI</div>
+      </a>
+      <a href="https://material-ui.com/" target="_blank" class="style-card bg-white p-4 rounded-lg border-2 border-gray-200 hover:border-blue-500">
+        <div class="text-2xl mb-2">🎨</div>
+        <div class="font-semibold">Material UI</div>
+        <div class="text-sm text-gray-600">Google Design</div>
+      </a>
+      <a href="https://tailwindui.com/" target="_blank" class="style-card bg-white p-4 rounded-lg border-2 border-gray-200 hover:border-blue-500">
+        <div class="text-2xl mb-2">💨</div>
+        <div class="font-semibold">Tailwind UI</div>
+        <div class="text-sm text-gray-600">Utility-first</div>
+      </a>
+      <a href="https://chakra-ui.com/" target="_blank" class="style-card bg-white p-4 rounded-lg border-2 border-gray-200 hover:border-blue-500">
+        <div class="text-2xl mb-2">⚡</div>
+        <div class="font-semibold">Chakra UI</div>
+        <div class="text-sm text-gray-600">Accessible</div>
+      </a>
+      <a href="https://shadcn.com/" target="_blank" class="style-card bg-white p-4 rounded-lg border-2 border-gray-200 hover:border-blue-500">
+        <div class="text-2xl mb-2">🎭</div>
+        <div class="font-semibold">shadcn/ui</div>
+        <div class="text-sm text-gray-600">Headless + Radix</div>
+      </a>
+      <a href="https://daisyui.com/" target="_blank" class="style-card bg-white p-4 rounded-lg border-2 border-gray-200 hover:border-blue-500">
+        <div class="text-2xl mb-2">🌼</div>
+        <div class="font-semibold">DaisyUI</div>
+        <div class="text-sm text-gray-600">Tailwind Components</div>
+      </a>
+      <a href="https://bootstrap.com/" target="_blank" class="style-card bg-white p-4 rounded-lg border-2 border-gray-200 hover:border-blue-500">
+        <div class="text-2xl mb-2">🅱️</div>
+        <div class="font-semibold">Bootstrap</div>
+        <div class="text-sm text-gray-600">Classic</div>
+      </a>
+      <a href="https://mantine.dev/" target="_blank" class="style-card bg-white p-4 rounded-lg border-2 border-gray-200 hover:border-blue-500">
+        <div class="text-2xl mb-2">🛠️</div>
+        <div class="font-semibold">Mantine</div>
+        <div class="text-sm text-gray-600">React Hooks</div>
+      </a>
+    </div>
+
+    <!-- Style Gallery -->
+    <h2 class="text-lg font-semibold mb-4">3. Select Visual Style</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="style-grid">
+      
+      <!-- Modern Minimal -->
+      <div class="style-card bg-white rounded-xl border-2 border-gray-200 overflow-hidden" onclick="selectStyle('modern_minimal')">
+        <div class="h-48 bg-white p-6 flex flex-col justify-center">
+          <h3 class="text-3xl font-light text-gray-900 mb-2">Modern Minimal</h3>
+          <p class="text-gray-500 text-sm">Clean, spacious, Apple-inspired</p>
+          <div class="mt-4 flex gap-2">
+            <div class="w-8 h-8 rounded-full bg-white border border-gray-200"></div>
+            <div class="w-8 h-8 rounded-full bg-gray-100"></div>
+            <div class="w-8 h-8 rounded-full bg-gray-200"></div>
+            <div class="w-8 h-8 rounded-full bg-blue-500"></div>
+          </div>
+        </div>
+        <div class="p-4 border-t border-gray-100">
+          <div class="font-semibold text-gray-900">Modern Minimal</div>
+          <div class="text-sm text-gray-600">Whitespace, subtle shadows, crisp</div>
+        </div>
+      </div>
+
+      <!-- Glassmorphism -->
+      <div class="style-card bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl border-2 border-gray-200 overflow-hidden" onclick="selectStyle('glassmorphism')">
+        <div class="h-48 p-6 flex flex-col justify-center relative">
+          <div class="glass rounded-lg p-4 absolute inset-4 flex flex-col justify-center">
+            <h3 class="text-2xl font-semibold text-white mb-1">Glassmorphism</h3>
+            <p class="text-white/70 text-sm">Frosted glass, blur effects</p>
+          </div>
+        </div>
+        <div class="p-4 border-t border-white/20 bg-white/10">
+          <div class="font-semibold text-white">Glassmorphism</div>
+          <div class="text-sm text-white/70">Transparency, backdrop blur, gradient</div>
+        </div>
+      </div>
+
+      <!-- Dark Neon -->
+      <div class="style-card bg-gray-900 rounded-xl border-2 border-gray-200 overflow-hidden" onclick="selectStyle('dark_neon')">
+        <div class="h-48 p-6 flex flex-col justify-center">
+          <h3 class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 mb-2">Dark Neon</h3>
+          <p class="text-gray-400 text-sm">Cyberpunk vibes, bold accents</p>
+          <div class="mt-4 flex gap-2">
+            <div class="px-3 py-1 rounded-full bg-purple-500/20 text-purple-400 text-xs">Neon</div>
+            <div class="px-3 py-1 rounded-full bg-pink-500/20 text-pink-400 text-xs">Glow</div>
+          </div>
+        </div>
+        <div class="p-4 border-t border-gray-800">
+          <div class="font-semibold text-white">Dark Neon</div>
+          <div class="text-sm text-gray-400">Dark mode, vibrant, high contrast</div>
+        </div>
+      </div>
+
+      <!-- Neumorphism -->
+      <div class="style-card rounded-xl border-2 border-gray-200 overflow-hidden" style="background: #e0e5ec;" onclick="selectStyle('neumorphism')">
+        <div class="h-48 p-6 flex flex-col justify-center">
+          <div class="neumorphic p-4 mb-3">
+            <h3 class="text-xl font-semibold text-gray-700">Neumorphism</h3>
+            <p class="text-gray-500 text-sm">Soft UI, extruded shapes</p>
+          </div>
+          <div class="neumorphic neumorphic-inset p-3">
+            <div class="text-xs text-gray-600">Inset shadow variant</div>
+          </div>
+        </div>
+        <div class="p-4 border-t border-gray-300">
+          <div class="font-semibold text-gray-700">Neumorphism</div>
+          <div class="text-sm text-gray-500">Soft shadows, tactile, 3D feel</div>
+        </div>
+      </div>
+
+      <!-- Brutalism -->
+      <div class="style-card bg-white rounded-xl border-2 border-gray-200 overflow-hidden" onclick="selectStyle('brutalism')">
+        <div class="h-48 p-6 flex flex-col justify-center">
+          <div class="brutalist p-4 bg-yellow-300">
+            <h3 class="text-2xl font-black text-black uppercase tracking-tight">Brutalism</h3>
+            <p class="text-black text-sm font-bold">Raw, bold, unapologetic</p>
+          </div>
+        </div>
+        <div class="p-4 border-t border-gray-200">
+          <div class="font-semibold text-gray-900">Brutalism</div>
+          <div class="text-sm text-gray-600">Raw, bold borders, high contrast</div>
+        </div>
+      </div>
+
+      <!-- Gradient Mesh -->
+      <div class="style-card gradient-mesh rounded-xl border-2 border-gray-200 overflow-hidden" onclick="selectStyle('gradient_mesh')">
+        <div class="h-48 p-6 flex flex-col justify-center text-white">
+          <h3 class="text-3xl font-bold mb-2">Gradient Mesh</h3>
+          <p class="text-white/80 text-sm">Fluid gradients, dreamy colors</p>
+          <div class="mt-4 flex gap-2">
+            <div class="w-6 h-6 rounded-full bg-purple-300"></div>
+            <div class="w-6 h-6 rounded-full bg-pink-300"></div>
+            <div class="w-6 h-6 rounded-full bg-blue-300"></div>
+          </div>
+        </div>
+        <div class="p-4 border-t border-white/20 bg-white/10">
+          <div class="font-semibold text-white">Gradient Mesh</div>
+          <div class="text-sm text-white/70">Multi-color gradients, fluid</div>
+        </div>
+      </div>
+
+      <!-- Aurora -->
+      <div class="style-card aurora rounded-xl border-2 border-gray-200 overflow-hidden" onclick="selectStyle('aurora')">
+        <div class="h-48 p-6 flex flex-col justify-center text-gray-800">
+          <h3 class="text-3xl font-bold mb-2">Aurora</h3>
+          <p class="text-gray-700 text-sm">Soft, natural, calming</p>
+        </div>
+        <div class="p-4 border-t border-white/30 bg-white/20">
+          <div class="font-semibold text-gray-800">Aurora</div>
+          <div class="text-sm text-gray-700">Pastel gradients, nature-inspired</div>
+        </div>
+      </div>
+
+      <!-- Clay -->
+      <div class="style-card bg-[#f5f0e8] rounded-xl border-2 border-gray-200 overflow-hidden" onclick="selectStyle('clay')">
+        <div class="h-48 p-6 flex flex-col justify-center">
+          <div class="clay p-4">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-1">Clay</h3>
+            <p class="text-gray-600 text-sm">Warm, organic, handcrafted</p>
+          </div>
+        </div>
+        <div class="p-4 border-t border-[#e8e0d0]">
+          <div class="font-semibold text-gray-800">Clay</div>
+          <div class="text-sm text-gray-600">Warm tones, rounded, friendly</div>
+        </div>
+      </div>
+
+      <!-- Retro -->
+      <div class="style-card retro rounded-xl border-2 border-gray-200 overflow-hidden" onclick="selectStyle('retro')">
+        <div class="h-48 p-6 flex flex-col justify-center">
+          <h3 class="text-3xl font-serif font-bold text-amber-800 mb-2">Retro</h3>
+          <p class="text-amber-700 text-sm">Vintage vibes, classic typography</p>
+          <div class="mt-3 text-2xl">✦ ✦ </div>
+        </div>
+        <div class="p-4 border-t border-amber-600">
+          <div class="font-semibold text-amber-900">Retro</div>
+          <div class="text-sm text-amber-700">Vintage, serif fonts, warm</div>
+        </div>
+      </div>
+
+      <!-- Holographic -->
+      <div class="style-card holographic rounded-xl border-2 border-gray-200 overflow-hidden" onclick="selectStyle('holographic')">
+        <div class="h-48 p-6 flex flex-col justify-center text-white">
+          <h3 class="text-3xl font-bold mb-2 text-shadow">Holographic</h3>
+          <p class="text-white/90 text-sm">Iridescent, futuristic, prismatic</p>
+        </div>
+        <div class="p-4 border-t border-white/20 bg-black/20">
+          <div class="font-semibold text-white">Holographic</div>
+          <div class="text-sm text-white/80">Shifting colors, metallic, bold</div>
+        </div>
+      </div>
+
+      <!-- Bento Grid -->
+      <div class="style-card bg-white rounded-xl border-2 border-gray-200 overflow-hidden" onclick="selectStyle('bento_grid')">
+        <div class="h-48 p-4 flex flex-col justify-center">
+          <div class="bento h-full">
+            <div class="bg-blue-100 rounded-lg p-2 flex items-center justify-center text-blue-600 font-semibold text-sm">Card 1</div>
+            <div class="bg-purple-100 rounded-lg p-2 flex items-center justify-center text-purple-600 font-semibold text-sm">Card 2</div>
+            <div class="bg-pink-100 rounded-lg p-2 flex items-center justify-center text-pink-600 font-semibold text-sm">Card 3</div>
+          </div>
+        </div>
+        <div class="p-4 border-t border-gray-100">
+          <div class="font-semibold text-gray-900">Bento Grid</div>
+          <div class="text-sm text-gray-600">Modular, card-based, organized</div>
+        </div>
+      </div>
+
+      <!-- Flat Design -->
+      <div class="style-card bg-white rounded-xl border-2 border-gray-200 overflow-hidden" onclick="selectStyle('flat_design')">
+        <div class="h-48 p-6 flex flex-col justify-center bg-blue-50">
+          <h3 class="text-3xl font-bold text-blue-600 mb-2">Flat Design</h3>
+          <p class="text-blue-400 text-sm">Simple, bold colors, no shadows</p>
+          <div class="mt-4 flex gap-3">
+            <div class="w-12 h-12 rounded bg-blue-500"></div>
+            <div class="w-12 h-12 rounded bg-green-500"></div>
+            <div class="w-12 h-12 rounded bg-red-500"></div>
+          </div>
+        </div>
+        <div class="p-4 border-t border-gray-100">
+          <div class="font-semibold text-gray-900">Flat Design</div>
+          <div class="text-sm text-gray-600">Simple, bold, no depth effects</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Selected Style Display -->
+    <div id="selected-display" class="mt-8 p-6 bg-blue-50 rounded-lg border-2 border-blue-200 hidden">
+      <h3 class="text-lg font-semibold mb-2">✅ Selected Style</h3>
+      <div class="text-2xl font-bold text-blue-600 mb-4" id="selected-style-name">-</div>
+      <div class="bg-white p-4 rounded-lg font-mono text-sm">
+        <code id="selected-style-code">-</code>
+      </div>
+      <p class="text-sm text-gray-600 mt-3">Copy the style name above and use it when asking AI Designer to generate your UI.</p>
+    </div>
+
+  </div>
+
+  <script>
+    let selectedPlatform = 'web';
+    let selectedStyle = '';
+
+    function selectPlatform(platform) {
+      selectedPlatform = platform;
+      document.getElementById('btn-web').className = platform === 'web' ? 'tab-active px-6 py-3 rounded-lg font-medium transition' : 'tab-inactive px-6 py-3 rounded-lg font-medium transition';
+      document.getElementById('btn-app').className = platform === 'app' ? 'tab-active px-6 py-3 rounded-lg font-medium transition' : 'tab-inactive px-6 py-3 rounded-lg font-medium transition';
+      document.getElementById('btn-both').className = platform === 'both' ? 'tab-active px-6 py-3 rounded-lg font-medium transition' : 'tab-inactive px-6 py-3 rounded-lg font-medium transition';
+    }
+
+    function selectStyle(style) {
+      selectedStyle = style;
+      
+      // Update card styles
+      document.querySelectorAll('.style-card').forEach(card => {
+        card.classList.remove('ring-4', 'ring-blue-500');
+      });
+      event.currentTarget.classList.add('ring-4', 'ring-blue-500');
+      
+      // Show selected display
+      const display = document.getElementById('selected-display');
+      display.classList.remove('hidden');
+      
+      const styleNames = {
+        modern_minimal: 'Modern Minimal',
+        glassmorphism: 'Glassmorphism',
+        dark_neon: 'Dark Neon',
+        neumorphism: 'Neumorphism',
+        brutalism: 'Brutalism',
+        gradient_mesh: 'Gradient Mesh',
+        aurora: 'Aurora',
+        clay: 'Clay',
+        retro: 'Retro',
+        holographic: 'Holographic',
+        bento_grid: 'Bento Grid',
+        flat_design: 'Flat Design'
+      };
+      
+      document.getElementById('selected-style-name').textContent = styleNames[style] || style;
+      document.getElementById('selected-style-code').textContent = `platform: "${selectedPlatform}", style: "${style}"`;
+      
+      // Scroll to display
+      display.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  </script>
+</body>
+</html>

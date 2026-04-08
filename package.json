@@ -1,0 +1,9 @@
+{
+  "name": "ai-designer-mcp",
+  "version": "1.0.0",
+  "description": "AI Designer MCP Server - Design beautiful UIs with React + Tailwind + Ant Design",
+  "main": "server.js",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  }
+}
