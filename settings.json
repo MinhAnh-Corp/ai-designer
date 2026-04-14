@@ -1,4 +1,5 @@
 {
+  "_HOOKS_FORMAT_NOTE": "Claude Code hooks REQUIRE the inner 'hooks' field to be an ARRAY of {type, command} objects. Do NOT put 'command' directly under the matcher — that causes an 'only accept array' validation error. See README section 'Hooks format (array required)' before editing.",
   "permissions": {
     "allow": [
       "Bash(*)",
@@ -18,7 +19,7 @@
   "mcpServers": {
     "ai-designer": {
       "command": "node",
-      "args": ["<PROJECT_PATH>/MCP/ai-designer/server.js"]
+      "args": ["<PROJECT_PATH>/server.js"]
     },
     "parallel-orchestrator": {
       "command": "node",
@@ -29,13 +30,23 @@
     "SessionStart": [
       {
         "matcher": "",
-        "command": "bash -c 'echo \"💡 AI Designer loaded. Use design_discovery tool to start designing.\"'"
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -c 'echo \"AI Designer loaded. Use design_discovery tool to start designing.\"'"
+          }
+        ]
       }
     ],
     "UserPromptSubmit": [
       {
         "matcher": "design|ui|component|layout|frontend",
-        "command": "bash -c 'echo \"🎨 Design request detected. Consider using design_discovery first.\"'"
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -c 'echo \"Design request detected. Consider using design_discovery first.\"'"
+          }
+        ]
       }
     ]
   }

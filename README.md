@@ -2,6 +2,40 @@
 
 Design beautiful UIs with **React + Tailwind CSS + Ant Design** using Qwen Code or Gemini CLI.
 
+> **⚠️ Hooks format (array required) — read before editing `settings.json` / `settings.claude.json`**
+>
+> Claude Code validates hooks strictly. The inner `hooks` field **must be an array** of `{type, command}` objects. Putting `command` directly under the matcher causes a validation error like *"only accept array"* and the settings file fails to load on a fresh machine.
+>
+> **✅ Correct:**
+> ```json
+> {
+>   "hooks": {
+>     "SessionStart": [
+>       {
+>         "matcher": "",
+>         "hooks": [
+>           { "type": "command", "command": "echo hi" }
+>         ]
+>       }
+>     ]
+>   }
+> }
+> ```
+>
+> **❌ Wrong (breaks on clone):** `{ "matcher": "", "command": "echo hi" }` — missing the nested `hooks: [...]` array.
+
+> **⚠️ Registering this MCP on a new machine**
+>
+> Claude Code on Windows stores MCP registrations in `~/.claude.json` (not `settings.json`). After `npm install`:
+>
+> ```bash
+> claude mcp add --scope user ai-designer node "<PROJECT_ROOT>/ai-agents/ai-designer/server.js"
+> claude mcp list   # should show ✓ Connected
+> ```
+>
+> Qwen shares the same server by adding the identical `mcpServers` entry in `~/.qwen/settings.json` (Qwen does read `mcpServers` from its settings file — Claude does not).
+
+
 ## Features
 
 - 🎨 **Design Discovery** - Ask requirements before designing
@@ -17,7 +51,7 @@ Design beautiful UIs with **React + Tailwind CSS + Ant Design** using Qwen Code 
 ### 1. Install
 
 ```bash
-cd /Volumes/bautd/minh-anh-corp/projects/vibe-code/MCP/ai-designer
+cd <PROJECT_ROOT>/ai-agents/ai-designer
 bash setup.sh
 ```
 
@@ -118,13 +152,13 @@ ai-designer/
 **MCP not loading?**
 ```bash
 # Check if server runs
-cd ~/ai-designer && node server.js
+cd <PROJECT_ROOT>/ai-agents/ai-designer && node server.js
 # Should see: "AI Designer MCP Server running on stdio"
 ```
 
 **Dependencies missing?**
 ```bash
-cd ~/ai-designer && npm install
+cd <PROJECT_ROOT>/ai-agents/ai-designer && npm install
 ```
 
 **Settings not merged?**
@@ -134,7 +168,7 @@ cd ~/ai-designer && npm install
 "mcpServers": {
   "ai-designer": {
     "command": "node",
-    "args": ["<PATH>/ai-designer/server.js"]
+    "args": ["<PROJECT_ROOT>/ai-agents/ai-designer/server.js"]
   }
 }
 ```

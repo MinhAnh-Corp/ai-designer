@@ -191,6 +191,39 @@ if [ -d "$REPO_DIR/ai-agent-auto" ]; then
   echo ""
 fi
 
+# ── Install for Claude Code too (symmetric with Qwen) ─────────
+CLAUDE_DIR="$HOME/.claude"
+if [ -d "$CLAUDE_DIR" ]; then
+  echo "════════════════════════════════════════"
+  echo "  Installing ai-designer for Claude Code"
+  echo "════════════════════════════════════════"
+  CLAUDE_MCP_DIR="$CLAUDE_DIR/mcp/ai-designer"
+  CLAUDE_COMMANDS_DIR="$CLAUDE_DIR/commands"
+  mkdir -p "$CLAUDE_MCP_DIR" "$CLAUDE_COMMANDS_DIR"
+  cp "$REPO_DIR/server.js" "$CLAUDE_MCP_DIR/server.js"
+  cp "$REPO_DIR/package.json" "$CLAUDE_MCP_DIR/package.json"
+  cp "$REPO_DIR/CLAUDE.md" "$CLAUDE_DIR/CLAUDE.md" 2>/dev/null || true
+  cp "$REPO_DIR/commands/design.md" "$CLAUDE_COMMANDS_DIR/design.md" 2>/dev/null || true
+  cp "$REPO_DIR/commands/UI-UX-GATES.md" "$CLAUDE_COMMANDS_DIR/UI-UX-GATES.md" 2>/dev/null || true
+  echo "  ✅ ai-designer MCP installed for Claude at $CLAUDE_MCP_DIR"
+  echo "  ℹ️  Merge mcpServers.ai-designer into ~/.claude/settings.json manually if needed"
+  echo ""
+fi
+
+# ── Optional: ai-skills-cloned lookup library ─────────────────
+echo "════════════════════════════════════════"
+echo "  Optional: install ai-skills-cloned library"
+echo "════════════════════════════════════════"
+echo ""
+echo "  FE/Designer skills lookup library (353 skills in ui-ux-designer/):"
+echo ""
+echo "    git clone git@github.com:MinhAnh-Corp/ai-skills-cloned.git /path/to/workspace/ai-skills-cloned"
+echo "    cd /path/to/workspace/ai-skills-cloned && bash install-skills.sh"
+echo ""
+echo "  Then reference from AI via lazy lookup:"
+echo "    rg -l 'responsive|accessibility' ai-skills-cloned/ui-ux-designer/ --type md"
+echo ""
+
 # ── Done ─────────────────────────────────────────────────────
 echo "════════════════════════════════════════"
 echo "  Setup Complete! ($OS)"
@@ -202,7 +235,7 @@ echo "  Config:      $QWEN_DIR/QWEN.md"
 echo "  Settings:    $QWEN_DIR/settings.json"
 echo ""
 echo "  Next steps:"
-echo "  1. Restart Qwen Code to load MCP"
+echo "  1. Restart Qwen Code (and Claude Code if you installed it) to load MCP"
 echo "  2. Start designing:"
 echo "     - Use tool: design_discovery"
 echo "     - Then: design_generate"

@@ -1,5 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "_HOOKS_FORMAT_NOTE": "Claude Code hooks REQUIRE the inner 'hooks' field to be an ARRAY of {type, command} objects. Do NOT put 'command' directly under the matcher — that causes an 'only accept array' validation error. See README section 'Hooks format (array required)' before editing.",
   "permissions": {
     "allow": [
       "Bash(*)",
@@ -22,7 +23,7 @@
   "mcpServers": {
     "ai-designer": {
       "command": "node",
-      "args": ["<HOME>/.qwen/mcp/ai-designer/server.js"]
+      "args": ["<HOME>/.claude/mcp/ai-designer/server.js"]
     },
     "parallel-orchestrator": {
       "command": "node",
@@ -44,13 +45,23 @@
     "SessionStart": [
       {
         "matcher": "",
-        "command": "bash -c 'echo \"🎨 AI Designer MCP loaded. Use discover_business tool to start designing.\"'"
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -c 'echo \"AI Designer MCP loaded. Use discover_business tool to start designing.\"'"
+          }
+        ]
       }
     ],
     "UserPromptSubmit": [
       {
         "matcher": "design|ui|component|layout|frontend|page|website|app",
-        "command": "bash -c 'echo \"💡 Design request detected. Use discover_business first, then discover_pages, scaffold_project, design_generate.\"'"
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -c 'echo \"Design request detected. Use discover_business first, then discover_pages, scaffold_project, design_generate.\"'"
+          }
+        ]
       }
     ]
   }
