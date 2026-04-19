@@ -321,7 +321,7 @@ When working in project with ai-agent-auto MCP:
 
 # AGENT SKILLS LIBRARY
 
-## Installed Skills (25 total)
+## Installed Skills (60 total)
 
 Skills are located in `skills/` directory and auto-activate based on context.
 
@@ -342,14 +342,64 @@ Next.js App Router, React state management, Tailwind design systems, JavaScript/
 ### Accessibility (2 skills)
 WCAG audit patterns, screen reader testing.
 
+### GSAP Animation (8 skills) — `skills/gsap-skills/skills/`
+- **gsap-core** - Core tween/animation API (gsap.to, from, fromTo, set)
+- **gsap-timeline** - Sequence animations với Timeline
+- **gsap-scrolltrigger** - Scroll-driven animations
+- **gsap-plugins** - Draggable, MotionPath, Flip, SplitText, Observer
+- **gsap-react** - React integration (useGSAP hook)
+- **gsap-frameworks** - Vue/Svelte/Angular integration
+- **gsap-performance** - GPU acceleration, will-change, throttling
+- **gsap-utils** - Helper functions (mapRange, snap, random, interpolate)
+
+### 3D / WebGL / Animation (22 skills + 5 bundles) — `skills/claudedesignskills/plugins/`
+
+**Individual** (`plugins/individual/`):
+- **threejs-webgl**, **react-three-fiber**, **babylonjs-engine**, **playcanvas-engine** - 3D engines
+- **aframe-webxr**, **spline-interactive**, **substance-3d-texturing** - WebXR + 3D content
+- **blender-web-pipeline**, **web3d-integration-patterns**, **lightweight-3d-effects** - 3D pipelines
+- **pixijs-2d** - 2D WebGL renderer
+- **gsap-scrolltrigger**, **locomotive-scroll**, **scroll-reveal-libraries** - Scroll animations
+- **animejs**, **motion-framer**, **react-spring-physics** - Animation libs
+- **lottie-animations**, **rive-interactive** - Vector/interactive animations
+- **barba-js** - Page transitions
+- **animated-component-libraries**, **modern-web-design** - Component patterns
+
+**Bundles** (`plugins/bundles/`):
+- **core-3d-animation**, **extended-3d-scroll**, **animation-components**, **authoring-motion**, **meta-skills**
+
 ## Skill Location
 - **ai-agent-auto:** `skills/` directory (blockchain, backend, cloud, security, DevOps) - 112 skills
-- **ai-designer:** `skills/` directory (frontend, UI/UX, design systems, accessibility) - 25 skills
+- **ai-designer:** `skills/` directory (frontend, UI/UX, design systems, accessibility, GSAP, 3D/WebGL) - 60 skills
 
 ## Sources
 - `anthropics/skills` - Official Anthropic skills (frontend-design)
 - `vercel-labs/agent-skills` - React/Next.js best practices (5 skills)
 - `wshobson/agents` - UI/UX, frontend/mobile, JavaScript/TypeScript (19 skills)
+- `greensock/gsap-skills` - Official GSAP animation skills (8 skills)
+- `freshtechbro/claudedesignskills` - 3D/WebGL/Animation (22 individual + 5 bundles)
+
+## Adding New Skill Library (clone workflow)
+
+When cloning a new skill repo into `skills/`:
+
+```bash
+cd ai-agents/ai-designer/skills
+git clone <repo-url> <folder-name>
+rm -rf <folder-name>/.git    # MUST remove nested .git to avoid submodule
+```
+
+Then update CLAUDE.md:
+1. Bump **Installed Skills (N total)** count at top of section
+2. Add new subsection under "Installed Skills" with skill list + path
+3. Update **Skill Location** line (count + category tag)
+4. Append to **Sources** list: `` `<org>/<repo>` - <description> (N skills)``
+
+Commit (no AI co-author):
+```bash
+git add ai-agents/ai-designer/skills/<folder-name> ai-agents/ai-designer/CLAUDE.md
+git commit -m "feat(ai-designer): add <name> skill library"
+```
 
 ---
 
