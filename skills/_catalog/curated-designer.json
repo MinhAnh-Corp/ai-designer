@@ -1,0 +1,122 @@
+[
+  {
+    "name": "design-system",
+    "stars": 162855,
+    "desc": "Use this skill to generate or audit design systems, check visual consistency, and review PRs that touch styling.",
+    "url": "https://github.com/affaan-m/everything-claude-code/tree/main/skills/design-system"
+  },
+  {
+    "name": "liquid-glass-design",
+    "stars": 162855,
+    "desc": "iOS 26 液态玻璃设计系统 — 适用于 SwiftUI、UIKit 和 WidgetKit 的动态玻璃材质，具有模糊、反射和交互式变形效果。",
+    "url": "https://github.com/affaan-m/everything-claude-code/tree/main/docs/zh-CN/skills/liquid-glass-design"
+  },
+  {
+    "name": "ui-ux-pro-max",
+    "stars": 68469,
+    "desc": "UI/UX design intelligence for web and mobile. Includes 50+ styles, 161 color palettes, 57 font pairings, 161 product types, 99 UX guidelines, and 25 chart types",
+    "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/tree/main/.claude/skills/ui-ux-pro-max"
+  },
+  {
+    "name": "3d-web-experience",
+    "stars": 34395,
+    "desc": "Expert in building 3D experiences for the web - Three.js, React Three Fiber, Spline, WebGL, and interactive 3D scenes. Covers product configurators, 3D portfoli",
+    "url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/plugins/antigravity-awesome-skills-claude/skills/3d-web-experience"
+  },
+  {
+    "name": "neon-postgres",
+    "stars": 34395,
+    "desc": "Expert patterns for Neon serverless Postgres, branching, connection pooling, and Prisma/Drizzle integration",
+    "url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/plugins/antigravity-awesome-skills-claude/skills/neon-postgres"
+  },
+  {
+    "name": "tailwind-design-system",
+    "stars": 34395,
+    "desc": "Build production-ready design systems with Tailwind CSS, including design tokens, component variants, responsive patterns, and accessibility.",
+    "url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/plugins/antigravity-awesome-skills-claude/skills/tailwind-design-system"
+  },
+  {
+    "name": "design-system-patterns",
+    "stars": 34024,
+    "desc": "Build scalable design systems with design tokens, theming infrastructure, and component architecture patterns. Use when creating design tokens, implementing the",
+    "url": "https://github.com/wshobson/agents/tree/main/plugins/ui-design/skills/design-system-patterns"
+  },
+  {
+    "name": "vercel-react-view-transitions",
+    "stars": 25433,
+    "desc": "Guide for implementing smooth, native-feeling animations using React's View Transition API (`<ViewTransition>` component, `addTransitionType`, and CSS view tran",
+    "url": "https://github.com/vercel-labs/agent-skills/tree/main/skills/react-view-transitions"
+  },
+  {
+    "name": "tailwind-best-practices",
+    "stars": 23180,
+    "desc": "Tailwind CSS styling guidelines for Mastra Playground UI. This skill should be used when writing, reviewing, or refactoring styling code in packages/playground-",
+    "url": "https://github.com/mastra-ai/mastra/tree/main/.claude/skills/tailwind-best-practices"
+  },
+  {
+    "name": "theme-factory",
+    "stars": 19643,
+    "desc": "> Scope: Non-website assets only. This skill applies to slides, docs, reportings, and other non-web artifacts. For website projects, do NOT use this skill — use",
+    "url": "https://github.com/kortix-ai/suna/tree/main/core/kortix-master/opencode/skills/GENERAL-KNOWLEDGE-WORKER/theme-factory"
+  },
+  {
+    "name": "react-three-fiber",
+    "stars": 14392,
+    "desc": "React Three Fiber 3D renderer for json-render. Use when working with @json-render/react-three-fiber, building 3D scenes from JSON specs, rendering meshes/lights",
+    "url": "https://github.com/vercel-labs/json-render/tree/main/skills/react-three-fiber"
+  },
+  {
+    "name": "tailwind-4",
+    "stars": 13638,
+    "desc": "Tailwind CSS 4 patterns and best practices. Trigger: When styling with Tailwind (className, variants, cn()), especially when dynamic styling or CSS variables ar",
+    "url": "https://github.com/prowler-cloud/prowler/tree/master/skills/tailwind-4"
+  },
+  {
+    "name": "ui-design-system",
+    "stars": 12219,
+    "desc": "UI design system toolkit for Senior UI Designer including design token generation, component documentation, responsive design calculations, and developer handof",
+    "url": "https://github.com/alirezarezvani/claude-skills/tree/main/product-team/ui-design-system"
+  },
+  {
+    "name": "system-design",
+    "stars": 11408,
+    "desc": "Design systems, services, and architectures. Trigger with \"design a system for\", \"how should we architect\", \"system design for\", \"what's the right architecture ",
+    "url": "https://github.com/anthropics/knowledge-work-plugins/tree/main/engineering/skills/system-design"
+  },
+  {
+    "name": "shader-dev",
+    "stars": 10984,
+    "desc": "Comprehensive GLSL shader techniques for creating stunning visual effects — ray marching, SDF modeling, fluid simulation, particle systems, procedural generatio",
+    "url": "https://github.com/MiniMax-AI/skills/tree/main/skills/shader-dev"
+  },
+  {
+    "name": "amazon-aurora-dsql",
+    "stars": 8833,
+    "desc": "Build with Aurora DSQL - manage schemas, execute queries, and handle migrations with DSQL-specific requirements. Use when developing a scalable or distributed d",
+    "url": "https://github.com/awslabs/mcp/tree/main/src/aurora-dsql-mcp-server/skills/amazon-aurora-dsql-skill"
+  },
+  {
+    "name": "aurora-dsql",
+    "stars": 8833,
+    "desc": "Build with Aurora DSQL - manage schemas, execute queries, and handle migrations with DSQL-specific requirements. Use when developing a scalable or distributed d",
+    "url": "https://github.com/awslabs/mcp/tree/main/src/aurora-dsql-mcp-server/skills/aurora-dsql-skill"
+  },
+  {
+    "name": "gsap",
+    "stars": 8486,
+    "desc": "GSAP animation reference for HyperFrames. Covers gsap.to(), from(), fromTo(), easing, stagger, defaults, timelines (gsap.timeline(), position parameter, labels,",
+    "url": "https://github.com/heygen-com/hyperframes/tree/main/skills/gsap"
+  },
+  {
+    "name": "tailwindcss",
+    "stars": 4890,
+    "desc": "Tailwind CSS v4 utility-first styling patterns including responsive design, dark mode, and custom configuration. Use when styling with Tailwind, adding utility ",
+    "url": "https://github.com/rajnandan1/kener/tree/main/.claude/skills/tailwindcss"
+  },
+  {
+    "name": "design-style",
+    "stars": 4230,
+    "desc": "Use this skill when the user asks to build, create, design, develop, or improve ANY frontend interface, web page, UI component, or visual element. This includes",
+    "url": "https://github.com/openclaw/skills/tree/main/skills/benangel65/design-style"
+  }
+]

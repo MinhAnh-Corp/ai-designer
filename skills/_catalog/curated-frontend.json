@@ -1,0 +1,122 @@
+[
+  {
+    "name": "nextjs-turbopack",
+    "stars": 162855,
+    "desc": "Next.js 16+ and Turbopack — incremental bundling, FS caching, dev speed, and when to use Turbopack vs webpack.",
+    "url": "https://github.com/affaan-m/everything-claude-code/tree/main/.agents/skills/nextjs-turbopack"
+  },
+  {
+    "name": "react-vendoring",
+    "stars": 139046,
+    "desc": "React vendoring and react-server layer boundaries. Use when editing entry-base.ts, $$compiled.internal.d.ts, compiled/react* packages, or taskfile.js copy_vendo",
+    "url": "https://github.com/vercel/next.js/tree/canary/.agents/skills/react-vendoring"
+  },
+  {
+    "name": "antd-commit-msg",
+    "stars": 97834,
+    "desc": "Generate a single-line commit message for ant-design by reading the project's git staged area and recent commit style. Use when the user asks for a commit messa",
+    "url": "https://github.com/ant-design/ant-design/tree/master/.agents/skills/commit-msg"
+  },
+  {
+    "name": "antd-create-pr",
+    "stars": 97834,
+    "desc": "Create pull requests for ant-design using the repository's official PR templates. Use this skill when the user asks to create/open a PR, draft PR title/body, su",
+    "url": "https://github.com/ant-design/ant-design/tree/master/.agents/skills/create-pr"
+  },
+  {
+    "name": "antd-issue-reply",
+    "stars": 97834,
+    "desc": "Help maintainers reply to Ant Design GitHub issues following official guidelines. Use this skill when the user asks to handle issues, reply to issues, process i",
+    "url": "https://github.com/ant-design/ant-design/tree/master/.agents/skills/issue-reply"
+  },
+  {
+    "name": "antd-version-release",
+    "stars": 97834,
+    "desc": "ant-design 仓库的版本发布工作流。在用户提到发版、准备 release PR、升级发布版本号、执行正式 npm publish、或处理 release 分支与发布校验时使用。它不负责收集或生成 changelog；涉及 changelog 收集、整理、改写时应使用 changelog-collect。",
+    "url": "https://github.com/ant-design/ant-design/tree/master/.agents/skills/version-release"
+  },
+  {
+    "name": "changelog-collect",
+    "stars": 97834,
+    "desc": "收集 ant-design 两个版本之间的 PR 信息并整理 changelog 草稿，更新到 CHANGELOG.zh-CN.md 和 CHANGELOG.en-US.md 时使用。适用于收集 changelog、生成 changelog、更新 changelog、版本对比等场景。",
+    "url": "https://github.com/ant-design/ant-design/tree/master/.agents/skills/changelog-collect"
+  },
+  {
+    "name": "react",
+    "stars": 75413,
+    "desc": "React component development guide. Use when working with React components (.tsx files), creating UI, using @lobehub/ui components, implementing routing, or buil",
+    "url": "https://github.com/lobehub/lobehub/tree/canary/.agents/skills/react"
+  },
+  {
+    "name": "typescript",
+    "stars": 75413,
+    "desc": "TypeScript code style and optimization guidelines. MUST READ before writing or modifying any TypeScript code (.ts, .tsx, .mts files). Also use when reviewing co",
+    "url": "https://github.com/lobehub/lobehub/tree/canary/.agents/skills/typescript"
+  },
+  {
+    "name": "zustand",
+    "stars": 75413,
+    "desc": "Zustand state management guide. Use when working with store code (src/store/**), implementing actions, managing state, or creating slices. Triggers on Zustand s",
+    "url": "https://github.com/lobehub/lobehub/tree/canary/.agents/skills/zustand"
+  },
+  {
+    "name": "typescript-review",
+    "stars": 46952,
+    "desc": "Review TypeScript and JavaScript code changes for compliance with Metabase coding standards, style violations, and code quality issues. Use when reviewing pull ",
+    "url": "https://github.com/metabase/metabase/tree/master/.claude/skills/typescript-review"
+  },
+  {
+    "name": "typescript-write",
+    "stars": 46952,
+    "desc": "Write TypeScript and JavaScript code following Metabase coding standards and best practices. Use when developing or refactoring TypeScript/JavaScript code.",
+    "url": "https://github.com/metabase/metabase/tree/master/.claude/skills/typescript-write"
+  },
+  {
+    "name": "react-component-documentation",
+    "stars": 43637,
+    "desc": "Create or update component documentation in Sentry's MDX stories format. Use when asked to \"document a component\", \"add stories\", \"write component docs\", \"creat",
+    "url": "https://github.com/getsentry/sentry/tree/master/.agents/skills/react-component-documentation"
+  },
+  {
+    "name": "nextjs-app-router",
+    "stars": 40052,
+    "desc": "Full end-to-end tRPC setup for Next.js App Router. Covers route handler with fetchRequestHandler (GET + POST exports), TRPCProvider with QueryClientProvider, cr",
+    "url": "https://github.com/trpc/trpc/tree/main/packages/next/skills/nextjs-app-router"
+  },
+  {
+    "name": "nextjs-pages-router",
+    "stars": 40052,
+    "desc": "Set up tRPC in Next.js Pages Router with createNextApiHandler, createTRPCNext, withTRPC HOC, SSR via ssr option and ssrPrepass, SSG via createServerSideHelpers ",
+    "url": "https://github.com/trpc/trpc/tree/main/packages/next/skills/nextjs-pages-router"
+  },
+  {
+    "name": "react-query-classic-migration",
+    "stars": 40052,
+    "desc": "Migrate from @trpc/react-query (classic) to @trpc/tanstack-react-query. Run npx @trpc/upgrade CLI for automated codemod. Manually migrate remaining patterns: ho",
+    "url": "https://github.com/trpc/trpc/tree/main/packages/tanstack-react-query/skills/react-query-classic-migration"
+  },
+  {
+    "name": "react-query-setup",
+    "stars": 40052,
+    "desc": "Set up @trpc/tanstack-react-query with createTRPCContext(), TRPCProvider, useTRPC() hook, queryOptions/mutationOptions factories, query invalidation via queryCl",
+    "url": "https://github.com/trpc/trpc/tree/main/packages/tanstack-react-query/skills/react-query-setup"
+  },
+  {
+    "name": "vue",
+    "stars": 38440,
+    "desc": "Vue 3 Composition API, script setup macros, reactivity system, and built-in components. Use when writing Vue SFCs, defineProps/defineEmits/defineModel, watchers",
+    "url": "https://github.com/moeru-ai/airi/tree/main/.agents/skills/vue"
+  },
+  {
+    "name": "vue-best-practices",
+    "stars": 38440,
+    "desc": "MUST be used for Vue.js tasks. Strongly recommends Composition API with `<script setup>` and TypeScript as the standard approach. Covers Vue 3, SSR, Volar, vue-",
+    "url": "https://github.com/moeru-ai/airi/tree/main/.agents/skills/vue-best-practices"
+  },
+  {
+    "name": "vueuse-functions",
+    "stars": 38440,
+    "desc": "Apply VueUse composables where appropriate to build concise, maintainable Vue.js / Nuxt features.",
+    "url": "https://github.com/moeru-ai/airi/tree/main/.agents/skills/vueuse-functions"
+  }
+]

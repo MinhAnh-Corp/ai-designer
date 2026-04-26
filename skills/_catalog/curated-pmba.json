@@ -1,0 +1,122 @@
+[
+  {
+    "name": "prd",
+    "stars": 30641,
+    "desc": "Generate high-quality Product Requirements Documents (PRDs) for software systems and AI-powered features. Includes executive summaries, user stories, technical ",
+    "url": "https://github.com/github/awesome-copilot/tree/main/skills/prd"
+  },
+  {
+    "name": "executing-marketing-campaigns",
+    "stars": 24819,
+    "desc": "Plans, creates, and optimizes marketing campaigns including content strategy, social media, email, and analytics. Helps develop go-to-market strategies, campaig",
+    "url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/creative-design/executing-marketing-campaigns"
+  },
+  {
+    "name": "roadmap-management",
+    "stars": 19643,
+    "desc": "You are an expert at product roadmap planning, prioritization, and communication. You help product managers build roadmaps that are strategic, realistic, and us",
+    "url": "https://github.com/kortix-ai/suna/tree/main/core/kortix-master/opencode/skills/GENERAL-KNOWLEDGE-WORKER/roadmap-management"
+  },
+  {
+    "name": "user-research-synthesis",
+    "stars": 19643,
+    "desc": "You are an expert at synthesizing user research — turning raw qualitative and quantitative data into structured insights that drive product decisions. You help ",
+    "url": "https://github.com/kortix-ai/suna/tree/main/core/kortix-master/opencode/skills/GENERAL-KNOWLEDGE-WORKER/user-research-synthesis"
+  },
+  {
+    "name": "agile-product-owner",
+    "stars": 12219,
+    "desc": "Agile product ownership for backlog management and sprint execution. Covers user story writing, acceptance criteria, sprint planning, and velocity tracking. Use",
+    "url": "https://github.com/alirezarezvani/claude-skills/tree/main/product-team/agile-product-owner"
+  },
+  {
+    "name": "marketing-strategy-pmm",
+    "stars": 12219,
+    "desc": "Product marketing skill for positioning, GTM strategy, competitive intelligence, and product launches. Use when the user asks about product positioning, go-to-m",
+    "url": "https://github.com/alirezarezvani/claude-skills/tree/main/marketing-skill/marketing-strategy-pmm"
+  },
+  {
+    "name": "product-manager-toolkit",
+    "stars": 12219,
+    "desc": "Comprehensive toolkit for product managers including RICE prioritization, customer interview analysis, PRD templates, discovery frameworks, and go-to-market str",
+    "url": "https://github.com/alirezarezvani/claude-skills/tree/main/product-team/product-manager-toolkit"
+  },
+  {
+    "name": "roadmap-communicator",
+    "stars": 12219,
+    "desc": "Use when preparing roadmap narratives, release notes, changelogs, or stakeholder updates tailored for executives, engineering teams, and customers.",
+    "url": "https://github.com/alirezarezvani/claude-skills/tree/main/product-team/roadmap-communicator"
+  },
+  {
+    "name": "scrum-master",
+    "stars": 12219,
+    "desc": "Advanced Scrum Master skill for data-driven agile team analysis and coaching. Use when the user asks about sprint planning, velocity tracking, retrospectives, s",
+    "url": "https://github.com/alirezarezvani/claude-skills/tree/main/project-management/scrum-master"
+  },
+  {
+    "name": "roadmap-update",
+    "stars": 11408,
+    "desc": "Update, create, or reprioritize your product roadmap. Use when adding a new initiative and deciding what moves to make room, shifting priorities after new infor",
+    "url": "https://github.com/anthropics/knowledge-work-plugins/tree/main/product-management/skills/roadmap-update"
+  },
+  {
+    "name": "user-research",
+    "stars": 11408,
+    "desc": "Plan, conduct, and synthesize user research. Trigger with \"user research plan\", \"interview guide\", \"usability test\", \"survey design\", \"research questions\", or w",
+    "url": "https://github.com/anthropics/knowledge-work-plugins/tree/main/design/skills/user-research"
+  },
+  {
+    "name": "crypto-research",
+    "stars": 4230,
+    "desc": "Performs comprehensive due diligence on a cryptocurrency using CoinMarketCap MCP data.\nUse when users ask about a specific coin beyond just its price. This incl",
+    "url": "https://github.com/openclaw/skills/tree/main/skills/bryan-cmc/crypto-research-using-cmc-mcp"
+  },
+  {
+    "name": "dapp",
+    "stars": 4230,
+    "desc": "A comprehensive AI agent skill for discovering, evaluating, and monitoring decentralized applications. Tracks on-chain activity anomalies, evaluates smart contr",
+    "url": "https://github.com/openclaw/skills/tree/main/skills/agenticio/dapp"
+  },
+  {
+    "name": "defi",
+    "stars": 4230,
+    "desc": "A protocol risk analyst and yield reality checker for decentralized finance. Evaluates protocol safety before deposit. Calculates real yield after gas, emission",
+    "url": "https://github.com/openclaw/skills/tree/main/skills/agisearch/defi"
+  },
+  {
+    "name": "depin",
+    "stars": 4230,
+    "desc": "A comprehensive AI agent skill for navigating the Decentralized Physical Infrastructure Networks ecosystem. Explains DePIN projects and tokenomics, evaluates pa",
+    "url": "https://github.com/openclaw/skills/tree/main/skills/agenticio/depin"
+  },
+  {
+    "name": "product-management-os",
+    "stars": 4230,
+    "desc": "Complete product management system — discovery, prioritization, roadmapping, metrics, and cross-functional leadership. Use when building products, running disco",
+    "url": "https://github.com/openclaw/skills/tree/main/skills/1kalin/afrexai-product-manager"
+  },
+  {
+    "name": "prd-development",
+    "stars": 3613,
+    "desc": "Build a structured PRD that connects problem, users, solution, and success criteria. Use when turning discovery notes into an engineering-ready document for a m",
+    "url": "https://github.com/deanpeters/Product-Manager-Skills/tree/main/skills/prd-development"
+  },
+  {
+    "name": "roadmap-planning",
+    "stars": 3613,
+    "desc": "Plan a strategic roadmap across prioritization, epic definition, stakeholder alignment, and sequencing. Use when turning strategy into a release plan that teams",
+    "url": "https://github.com/deanpeters/Product-Manager-Skills/tree/main/skills/roadmap-planning"
+  },
+  {
+    "name": "user-story",
+    "stars": 3613,
+    "desc": "Create user stories with Mike Cohn format and Gherkin acceptance criteria. Use when turning user needs into development-ready work with clear outcomes and testa",
+    "url": "https://github.com/deanpeters/Product-Manager-Skills/tree/main/skills/user-story"
+  },
+  {
+    "name": "user-story-mapping",
+    "stars": 3613,
+    "desc": "Create a user story map that lays out activities, steps, tasks, and release slices. Use when planning a workflow, backlog, or MVP around the user journey.",
+    "url": "https://github.com/deanpeters/Product-Manager-Skills/tree/main/skills/user-story-mapping"
+  }
+]

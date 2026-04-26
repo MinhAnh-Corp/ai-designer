@@ -1,0 +1,122 @@
+[
+  {
+    "name": "docker-patterns",
+    "stars": 162855,
+    "desc": "Docker and Docker Compose patterns for local development, container security, networking, volume strategies, and multi-service orchestration. Use when setting u",
+    "url": "https://github.com/affaan-m/everything-claude-code/tree/main/.kiro/skills/docker-patterns"
+  },
+  {
+    "name": "docker-management",
+    "stars": 107804,
+    "desc": "Manage Docker containers, images, volumes, networks, and Compose stacks — lifecycle ops, debugging, cleanup, and Dockerfile optimization.",
+    "url": "https://github.com/NousResearch/hermes-agent/tree/main/optional-skills/devops/docker-management"
+  },
+  {
+    "name": "github-actions-templates",
+    "stars": 34395,
+    "desc": "Production-ready GitHub Actions workflow patterns for testing, building, and deploying applications.",
+    "url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/plugins/antigravity-awesome-skills-claude/skills/github-actions-templates"
+  },
+  {
+    "name": "grafana-dashboards",
+    "stars": 34024,
+    "desc": "Create and manage production Grafana dashboards for real-time visualization of system and application metrics. Use when building monitoring dashboards, visualiz",
+    "url": "https://github.com/wshobson/agents/tree/main/plugins/observability-monitoring/skills/grafana-dashboards"
+  },
+  {
+    "name": "helm-chart-scaffolding",
+    "stars": 34024,
+    "desc": "Design, organize, and manage Helm charts for templating and packaging Kubernetes applications with reusable configurations. Use when creating Helm charts, packa",
+    "url": "https://github.com/wshobson/agents/tree/main/plugins/kubernetes-operations/skills/helm-chart-scaffolding"
+  },
+  {
+    "name": "prometheus-configuration",
+    "stars": 34024,
+    "desc": "Set up Prometheus for comprehensive metric collection, storage, and monitoring of infrastructure and applications. Use when implementing metrics collection, set",
+    "url": "https://github.com/wshobson/agents/tree/main/plugins/observability-monitoring/skills/prometheus-configuration"
+  },
+  {
+    "name": "terraform-module-library",
+    "stars": 34024,
+    "desc": "Build reusable Terraform modules for AWS, Azure, GCP, and OCI infrastructure following infrastructure-as-code best practices. Use when creating infrastructure m",
+    "url": "https://github.com/wshobson/agents/tree/main/plugins/cloud-infrastructure/skills/terraform-module-library"
+  },
+  {
+    "name": "devops-rollout-plan",
+    "stars": 30641,
+    "desc": "Generate comprehensive rollout plans with preflight checks, step-by-step deployment, verification signals, rollback procedures, and communication plans for infr",
+    "url": "https://github.com/github/awesome-copilot/tree/main/skills/devops-rollout-plan"
+  },
+  {
+    "name": "terraform-azurerm-set-diff-analyzer",
+    "stars": 30641,
+    "desc": "Analyze Terraform plan JSON output for AzureRM Provider to distinguish between false-positive diffs (order-only changes in Set-type attributes) and actual resou",
+    "url": "https://github.com/github/awesome-copilot/tree/main/skills/terraform-azurerm-set-diff-analyzer"
+  },
+  {
+    "name": "devops-iac-engineer",
+    "stars": 24819,
+    "desc": "Implements infrastructure as code using Terraform, Kubernetes, and cloud platforms. Designs scalable architectures, CI/CD pipelines, and observability solutions",
+    "url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/devops-iac-engineer"
+  },
+  {
+    "name": "github-actions-creator",
+    "stars": 24819,
+    "desc": "Use when the user wants to create, generate, or set up a GitHub Actions workflow. Handles CI/CD pipelines, testing, deployment, linting, security scanning, rele",
+    "url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/github-actions-creator"
+  },
+  {
+    "name": "ci-cd-and-automation",
+    "stars": 19678,
+    "desc": "Automates CI/CD pipeline setup. Use when setting up or modifying build and deployment pipelines. Use when you need to automate quality gates, configure test run",
+    "url": "https://github.com/addyosmani/agent-skills/tree/main/skills/ci-cd-and-automation"
+  },
+  {
+    "name": "docker-extend",
+    "stars": 19176,
+    "desc": "Use when: User wants to extend Docker with custom tools, personalize the Docker environment,\nor set up user-specific Docker customization.\nTriggers: 'extend doc",
+    "url": "https://github.com/coleam00/Archon/tree/dev/.claude/skills/docker-extend"
+  },
+  {
+    "name": "ansible",
+    "stars": 16871,
+    "desc": "Ansible automation expert for playbooks, roles, inventories, and infrastructure management",
+    "url": "https://github.com/RightNow-AI/openfang/tree/main/crates/openfang-skills/bundled/ansible"
+  },
+  {
+    "name": "ci-cd",
+    "stars": 16871,
+    "desc": "CI/CD pipeline expert for GitHub Actions, GitLab CI, Jenkins, and deployment automation",
+    "url": "https://github.com/RightNow-AI/openfang/tree/main/crates/openfang-skills/bundled/ci-cd"
+  },
+  {
+    "name": "docker",
+    "stars": 16871,
+    "desc": "Docker expert for containers, Compose, Dockerfiles, and debugging",
+    "url": "https://github.com/RightNow-AI/openfang/tree/main/crates/openfang-skills/bundled/docker"
+  },
+  {
+    "name": "helm",
+    "stars": 16871,
+    "desc": "Helm chart expert for Kubernetes package management, templating, and dependency management",
+    "url": "https://github.com/RightNow-AI/openfang/tree/main/crates/openfang-skills/bundled/helm"
+  },
+  {
+    "name": "kubernetes",
+    "stars": 16871,
+    "desc": "Kubernetes operations expert for kubectl, pods, deployments, and debugging",
+    "url": "https://github.com/RightNow-AI/openfang/tree/main/crates/openfang-skills/bundled/kubernetes"
+  },
+  {
+    "name": "prometheus",
+    "stars": 16871,
+    "desc": "Prometheus monitoring expert for PromQL, alerting rules, Grafana dashboards, and observability",
+    "url": "https://github.com/RightNow-AI/openfang/tree/main/crates/openfang-skills/bundled/prometheus"
+  },
+  {
+    "name": "terraform",
+    "stars": 16871,
+    "desc": "Terraform IaC expert for providers, modules, state management, and planning",
+    "url": "https://github.com/RightNow-AI/openfang/tree/main/crates/openfang-skills/bundled/terraform"
+  }
+]

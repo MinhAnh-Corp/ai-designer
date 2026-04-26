@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * AI Designer MCP Server - Universal (Claude Code / Qwen Code / Gemini CLI)
+ * AI Designer MCP Server - Universal (Claude Code / Gemini CLI)
  * 
  * Workflow:
  * 1. Discovery: Business/Domain → Platform → Pages → Components
@@ -16,8 +16,8 @@ const { StdioServerTransport } = require('@modelcontextprotocol/sdk/server/stdio
 const { z } = require('zod');
 
 // ── Style Gallery (local HTML file) ──
-const STYLE_GALLERY_PATH = process.env.AI_DESIGNER_GALLERY_PATH || 
-  `${process.env.HOME}/.qwen/mcp/ai-designer/style-gallery.html`;
+const STYLE_GALLERY_PATH = process.env.AI_DESIGNER_GALLERY_PATH ||
+  `${process.env.HOME}/.claude/mcp/ai-designer/style-gallery.html`;
 const STYLE_GALLERY_URL = `file://${STYLE_GALLERY_PATH}`;
 
 // ── Business Domain Templates ──
@@ -692,7 +692,7 @@ async function main() {
   const transport = new StdioServerTransport();
   await server.connect(transport);
   console.error('AI Designer MCP Server v2.0 running on stdio');
-  console.error('Universal: Claude Code | Qwen Code | Gemini CLI');
+  console.error('Universal: Claude Code | Gemini CLI');
 }
 
 main().catch(console.error);

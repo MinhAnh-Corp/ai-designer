@@ -1,0 +1,122 @@
+[
+  {
+    "name": "defi-amm-security",
+    "stars": 162855,
+    "desc": "Security checklist for Solidity AMM contracts, liquidity pools, and swap flows. Covers reentrancy, CEI ordering, donation or inflation attacks, oracle manipulat",
+    "url": "https://github.com/affaan-m/everything-claude-code/tree/main/skills/defi-amm-security"
+  },
+  {
+    "name": "evm-token-decimals",
+    "stars": 162855,
+    "desc": "Prevent silent decimal mismatch bugs across EVM chains. Covers runtime decimal lookup, chain-aware caching, bridged-token precision drift, and safe normalizatio",
+    "url": "https://github.com/affaan-m/everything-claude-code/tree/main/skills/evm-token-decimals"
+  },
+  {
+    "name": "solidity-security",
+    "stars": 34395,
+    "desc": "Master smart contract security best practices, vulnerability prevention, and secure Solidity development patterns.",
+    "url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/plugins/antigravity-awesome-skills-claude/skills/solidity-security"
+  },
+  {
+    "name": "defi-protocol-templates",
+    "stars": 34024,
+    "desc": "Implement DeFi protocols with production-ready templates for staking, AMMs, governance, and lending systems. Use when building decentralized finance application",
+    "url": "https://github.com/wshobson/agents/tree/main/plugins/blockchain-web3/skills/defi-protocol-templates"
+  },
+  {
+    "name": "web3-testing",
+    "stars": 34024,
+    "desc": "Test smart contracts comprehensively using Hardhat and Foundry with unit tests, integration tests, and mainnet forking. Use when testing Solidity contracts, set",
+    "url": "https://github.com/wshobson/agents/tree/main/plugins/blockchain-web3/skills/web3-testing"
+  },
+  {
+    "name": "add-non-evm-swaps-bridge-network",
+    "stars": 13106,
+    "desc": "Implements and reviews non-EVM network support for the extension Swaps/Bridge client using the canonical repository standard. Use when adding or updating bridge",
+    "url": "https://github.com/MetaMask/metamask-extension/tree/main/.cursor/skills/add-non-evm-swaps-bridge-network"
+  },
+  {
+    "name": "run-acceptance-tests",
+    "stars": 6415,
+    "desc": "Build dependencies and run acceptance tests locally in the Optimism monorepo. Handles contracts, cannon prestates, Rust binaries, and optional kona prestate.",
+    "url": "https://github.com/ethereum-optimism/optimism/tree/develop/.claude/skills/run-acceptance-tests"
+  },
+  {
+    "name": "data-layer",
+    "stars": 5899,
+    "desc": "This skill provides patterns for working with the data-layer module. Use when creating/editing files in src/data-layer/, src/lib/data/, or adding new data sourc",
+    "url": "https://github.com/ethereum/ethereum-org-website/tree/dev/.claude/skills/data-layer"
+  },
+  {
+    "name": "web3-fullstack-packaged-build",
+    "stars": 5573,
+    "desc": "Systematic full-stack Web3 build with mandatory packaging and delivery phase",
+    "url": "https://github.com/HKUDS/OpenSpace/tree/main/gdpval_bench/skills/web3-fullstack-systematic-build-enhanced"
+  },
+  {
+    "name": "web3-fullstack-systematic-build",
+    "stars": 5573,
+    "desc": "Systematic approach to building full-stack Web3 applications layer by layer",
+    "url": "https://github.com/HKUDS/OpenSpace/tree/main/gdpval_bench/skills/web3-fullstack-systematic-build"
+  },
+  {
+    "name": "analyzing-ethereum-smart-contract-vulnerabilities",
+    "stars": 5388,
+    "desc": "Perform static and symbolic analysis of Solidity smart contracts using Slither and Mythril to detect reentrancy, integer overflow, access control, and other vul",
+    "url": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills/tree/main/skills/analyzing-ethereum-smart-contract-vulnerabilities"
+  },
+  {
+    "name": "cosmos-vulnerability-scanner",
+    "stars": 4700,
+    "desc": "Scans Cosmos SDK blockchain modules and CosmWasm contracts for consensus-critical vulnerabilities — chain halts, fund loss, state divergence. 25 core + 16 IBC +",
+    "url": "https://github.com/trailofbits/skills/tree/main/plugins/building-secure-contracts/skills/cosmos-vulnerability-scanner"
+  },
+  {
+    "name": "entry-point-analyzer",
+    "stars": 4700,
+    "desc": "Analyzes smart contract codebases to identify state-changing entry points for security auditing. Detects externally callable functions that modify state, catego",
+    "url": "https://github.com/trailofbits/skills/tree/main/plugins/entry-point-analyzer/skills/entry-point-analyzer"
+  },
+  {
+    "name": "hunt-focus-definition",
+    "stars": 4536,
+    "desc": "Define a focused hunt hypothesis by synthesizing completed system internals and adversary tradecraft research. Use this skill after research has been completed ",
+    "url": "https://github.com/OTRF/ThreatHunter-Playbook/tree/main/.github/skills/hunt-focus-definition"
+  },
+  {
+    "name": "define-errors",
+    "stars": 4455,
+    "desc": "How to define and use defineErrors from wellcrafted. Use when creating new error types, updating error definitions, or reviewing error patterns. Covers variant ",
+    "url": "https://github.com/EpicenterHQ/epicenter/tree/main/.agents/skills/define-errors"
+  },
+  {
+    "name": "axon-agent",
+    "stars": 4230,
+    "desc": "Register and operate an AI Agent on the Axon blockchain (AI Agent Native L1, Cosmos SDK + EVM, Chain ID 9001). Use when a user wants to: (1) register an agent o",
+    "url": "https://github.com/openclaw/skills/tree/main/skills/6tizer/axon-agent"
+  },
+  {
+    "name": "bitcoin-mcp",
+    "stars": 4230,
+    "desc": "47 Bitcoin tools for your AI agent — fee intelligence, mempool analysis, address lookups, transaction decoding, and more. MCP server backed by the Satoshi API.",
+    "url": "https://github.com/openclaw/skills/tree/main/skills/bortlesboat/bitcoin-mcp"
+  },
+  {
+    "name": "defi",
+    "stars": 4230,
+    "desc": "A protocol risk analyst and yield reality checker for decentralized finance. Evaluates protocol safety before deposit. Calculates real yield after gas, emission",
+    "url": "https://github.com/openclaw/skills/tree/main/skills/agisearch/defi"
+  },
+  {
+    "name": "defi-analyst",
+    "stars": 4230,
+    "desc": "DeFi research and analysis via Tavily MCP, GeckoTerminal API, and DeFiLlama. Use for protocol research, TVL tracking, yield analysis, token discovery, and compe",
+    "url": "https://github.com/openclaw/skills/tree/main/skills/0x-wzw/defi-analyst"
+  },
+  {
+    "name": "defi-consensus-oracle",
+    "stars": 4230,
+    "desc": "Get swarm-aggregated DeFi and market consensus from SuperColony before making trading or investment decisions. Use when you need more than one agent's opinion o",
+    "url": "https://github.com/openclaw/skills/tree/main/skills/buildingonchain/defi-consensus-oracle"
+  }
+]

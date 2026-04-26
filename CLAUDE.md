@@ -33,7 +33,7 @@ rg -l "responsive\|breakpoint\|mobile-first" ai-skills-cloned/ui-ux-designer/
 Load only top 1-3 matching skill files — NEVER grep the full library into context.
 
 **Role separation:**
-- **Claude Code (primary) + Qwen Code (secondary)** handle Blockchain + Backend (via `ai-agent-auto` rules)
+- **Claude Code (primary) + Gemini CLI (research)** handle Blockchain + Backend (via `ai-agent-auto` rules)
 - **This ai-designer MCP** handles Frontend Master + Designer Master (via `ui-ux-designer` skills)
 - Cross-role: FE task that touches API/backend → delegate back to Claude
 
@@ -127,7 +127,7 @@ Buttons:      Button, Space, Dropdown
 
 ---
 
-## MCP TOOLS (Universal: Claude/Qwen/Gemini)
+## MCP TOOLS (Universal: Claude / Gemini)
 
 ### 1. discover_business
 Ask BEFORE designing:
@@ -135,7 +135,7 @@ Ask BEFORE designing:
 - Project name
 - Target audience (general, enterprise, developer, consumer, internal)
 - Platform (web, mobile_web, pwa, desktop)
-- Design style (open gallery: ~/.qwen/mcp/ai-designer/style-gallery.html)
+- Design style (open gallery: ~/.claude/mcp/ai-designer/style-gallery.html)
 
 ### 2. discover_pages
 After business discovery:
@@ -379,6 +379,32 @@ WCAG audit patterns, screen reader testing.
 - `greensock/gsap-skills` - Official GSAP animation skills (8 skills)
 - `freshtechbro/claudedesignskills` - 3D/WebGL/Animation (22 individual + 5 bundles)
 
+## External Catalog (skillsmp.com)
+
+`skills/_catalog/` holds curated JSON catalogs from skillsmp.com (973k indexed skills, API capped at 1200/sort).
+Built via 60+ keyword searches per role, deduped by name (highest-stars kept), top-20 per role.
+
+Files:
+- `_catalog/curated-blockchain.json` — Solidity, Cosmos, EVM, DeFi
+- `_catalog/curated-security.json` — OWASP, audit, pentesting
+- `_catalog/curated-devops.json` — K8s, Docker, Terraform, CI/CD
+- `_catalog/curated-backend.json` — Go, Postgres, NestJS, GraphQL
+- `_catalog/curated-frontend.json` — React, Next.js, TypeScript, Zustand
+- `_catalog/curated-designer.json` — Glassmorphism, Aurora, Three.js, GSAP, shaders
+- `_catalog/curated-pmba.json` — PRD, roadmap, agile, GTM
+- `_catalog/README.md` — clone instructions (sparse-checkout vs curl raw)
+
+**Refresh cadence:** Re-run keyword fanout monthly. Use `sortBy=recent` to discover new skills.
+
+**Lookup pattern:**
+```bash
+# Quick browse top picks per role
+jq -r '.[] | "[\(.stars)★] \(.name) — \(.desc)"' skills/_catalog/curated-<role>.json | head -10
+
+# Find skills by theme
+jq -r '.[] | select(.desc | test("glassmorphism|aurora"; "i")) | .url' skills/_catalog/curated-*.json
+```
+
 ## Adding New Skill Library (clone workflow)
 
 When cloning a new skill repo into `skills/`:
@@ -403,4 +429,4 @@ git commit -m "feat(ai-designer): add <name> skill library"
 
 ---
 
-_Version: 2.0 - Universal MCP (Claude/Qwen/Gemini) - React + Tailwind + Ant Design + Vite + React Router_
+_Version: 2.1 - Universal MCP (Claude / Gemini) - React + Tailwind + Ant Design + Vite + React Router_

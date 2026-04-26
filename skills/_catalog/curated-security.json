@@ -1,0 +1,122 @@
+[
+  {
+    "name": "security-triage",
+    "stars": 361765,
+    "desc": "Triage GitHub security advisories for OpenClaw with high-confidence close/keep decisions, exact tag and commit verification, trust-model checks, optional harden",
+    "url": "https://github.com/openclaw/openclaw/tree/main/.agents/skills/security-triage"
+  },
+  {
+    "name": "defi-amm-security",
+    "stars": 162855,
+    "desc": "Security checklist for Solidity AMM contracts, liquidity pools, and swap flows. Covers reentrancy, CEI ordering, donation or inflation attacks, oracle manipulat",
+    "url": "https://github.com/affaan-m/everything-claude-code/tree/main/skills/defi-amm-security"
+  },
+  {
+    "name": "llm-trading-agent-security",
+    "stars": 162855,
+    "desc": "Security patterns for autonomous trading agents with wallet or transaction authority. Covers prompt injection, spend limits, pre-send simulation, circuit breake",
+    "url": "https://github.com/affaan-m/everything-claude-code/tree/main/skills/llm-trading-agent-security"
+  },
+  {
+    "name": "security-bounty-hunter",
+    "stars": 162855,
+    "desc": "Hunt for exploitable, bounty-worthy security issues in repositories. Focuses on remotely reachable vulnerabilities that qualify for real reports instead of nois",
+    "url": "https://github.com/affaan-m/everything-claude-code/tree/main/skills/security-bounty-hunter"
+  },
+  {
+    "name": "security-review",
+    "stars": 162855,
+    "desc": "Use this skill when adding authentication, handling user input, working with secrets, creating API endpoints, or implementing payment/sensitive features. Provid",
+    "url": "https://github.com/affaan-m/everything-claude-code/tree/main/skills/security-review"
+  },
+  {
+    "name": "security-scan",
+    "stars": 162855,
+    "desc": "Scan your Claude Code configuration (.claude/ directory) for security vulnerabilities, misconfigurations, and injection risks using AgentShield. Checks CLAUDE.m",
+    "url": "https://github.com/affaan-m/everything-claude-code/tree/main/skills/security-scan"
+  },
+  {
+    "name": "pentest-checklist",
+    "stars": 34395,
+    "desc": "Provide a comprehensive checklist for planning, executing, and following up on penetration tests. Ensure thorough preparation, proper scoping, and effective rem",
+    "url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/plugins/antigravity-awesome-skills-claude/skills/pentest-checklist"
+  },
+  {
+    "name": "pentest-commands",
+    "stars": 34395,
+    "desc": "Provide a comprehensive command reference for penetration testing tools including network scanning, exploitation, password cracking, and web application testing",
+    "url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/plugins/antigravity-awesome-skills-claude/skills/pentest-commands"
+  },
+  {
+    "name": "security-compliance-compliance-check",
+    "stars": 34395,
+    "desc": "You are a compliance expert specializing in regulatory requirements for software systems including GDPR, HIPAA, SOC2, PCI-DSS, and other industry standards. Per",
+    "url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/plugins/antigravity-awesome-skills-claude/skills/security-compliance-compliance-check"
+  },
+  {
+    "name": "security-scanning-security-dependencies",
+    "stars": 34395,
+    "desc": "You are a security expert specializing in dependency vulnerability analysis, SBOM generation, and supply chain security. Scan project dependencies across multip",
+    "url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/plugins/antigravity-awesome-skills-claude/skills/security-scanning-security-dependencies"
+  },
+  {
+    "name": "sqlmap-database-pentesting",
+    "stars": 34395,
+    "desc": "Provide systematic methodologies for automated SQL injection detection and exploitation using SQLMap.",
+    "url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/sqlmap-database-pentesting"
+  },
+  {
+    "name": "sast-configuration",
+    "stars": 34024,
+    "desc": "Configure Static Application Security Testing (SAST) tools for automated vulnerability detection in application code. Use when setting up security scanning, imp",
+    "url": "https://github.com/wshobson/agents/tree/main/plugins/security-scanning/skills/sast-configuration"
+  },
+  {
+    "name": "security-requirement-extraction",
+    "stars": 34024,
+    "desc": "Derive security requirements from threat models and business context. Use when translating threats into actionable requirements, creating security user stories,",
+    "url": "https://github.com/wshobson/agents/tree/main/plugins/security-scanning/skills/security-requirement-extraction"
+  },
+  {
+    "name": "threat-mitigation-mapping",
+    "stars": 34024,
+    "desc": "Map identified threats to appropriate security controls and mitigations. Use when prioritizing security investments, creating remediation plans, or validating c",
+    "url": "https://github.com/wshobson/agents/tree/main/plugins/security-scanning/skills/threat-mitigation-mapping"
+  },
+  {
+    "name": "security-audit",
+    "stars": 32621,
+    "desc": "Security scanning and vulnerability detection. Use when: authentication, authorization, payment processing, user data. Skip when: read-only operations, internal",
+    "url": "https://github.com/ruvnet/ruflo/tree/main/v3/@claude-flow/codex/.agents/skills/security-audit"
+  },
+  {
+    "name": "threat-model-analyst",
+    "stars": 30641,
+    "desc": "Full STRIDE-A threat model analysis and incremental update skill for repositories and systems. Supports two modes: (1) Single analysis — full STRIDE-A threat mo",
+    "url": "https://github.com/github/awesome-copilot/tree/main/skills/threat-model-analyst"
+  },
+  {
+    "name": "security-best-practices",
+    "stars": 24819,
+    "desc": "Perform language and framework specific security best-practice reviews and suggest improvements. Trigger only when the user explicitly requests security best pr",
+    "url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/security/security-best-practices"
+  },
+  {
+    "name": "security-compliance",
+    "stars": 24819,
+    "desc": "Guides security professionals in implementing defense-in-depth security architectures, achieving compliance with industry frameworks (SOC2, ISO27001, GDPR, HIPA",
+    "url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/security-compliance"
+  },
+  {
+    "name": "security-ownership-map",
+    "stars": 24819,
+    "desc": "Analyze git repositories to build a security ownership topology (people-to-file), compute bus factor and sensitive-code ownership, and export CSV/JSON for graph",
+    "url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/security/security-ownership-map"
+  },
+  {
+    "name": "security-threat-model",
+    "stars": 24819,
+    "desc": "Repository-grounded threat modeling that enumerates trust boundaries, assets, attacker capabilities, abuse paths, and mitigations, and writes a concise Markdown",
+    "url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/security/security-threat-model"
+  }
+]

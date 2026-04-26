@@ -1,6 +1,6 @@
 # 🎨 AI Designer MCP - Quick Start
 
-Universal AI Designer for **Claude Code / Qwen Code / Gemini CLI**
+Universal AI Designer for **Claude Code / Gemini CLI**
 
 ## Workflow Overview
 
@@ -15,11 +15,11 @@ Universal AI Designer for **Claude Code / Qwen Code / Gemini CLI**
 ## Quick Start (5 minutes)
 
 ### Step 1: Restart your AI CLI
-Restart Qwen Code / Claude Code / Gemini CLI to load the new MCP.
+Restart Claude Code / Gemini CLI to load the new MCP.
 
 ### Step 2: Open Style Gallery
 ```bash
-open ~/.qwen/mcp/ai-designer/style-gallery.html
+open ~/.claude/mcp/ai-designer/style-gallery.html
 ```
 Browse 12 design styles, click your favorite, copy the style name.
 
@@ -48,7 +48,7 @@ AI will automatically:
 2. Project Name: ShopVN
 3. Target Audience: consumer
 4. Platform: 🌐 Website
-5. Design Style: Open ~/.qwen/mcp/ai-designer/style-gallery.html and pick one!
+5. Design Style: Open ~/.claude/mcp/ai-designer/style-gallery.html and pick one!
 
 Style options: Modern Minimal, Glassmorphism, Dark Neon, Neumorphism, 
 Brutalism, Gradient Mesh, Aurora, Clay, Retro, Holographic, Bento Grid, Flat Design
@@ -209,20 +209,20 @@ my-app/
 **MCP tools not showing?**
 ```bash
 # Restart your AI CLI
-# Or check: cat ~/.qwen/settings.json | grep ai-designer
+# Or check: cat ~/.claude/settings.json | grep ai-designer
 ```
 
 **Gallery not opening?**
 ```bash
-open ~/.qwen/mcp/ai-designer/style-gallery.html
+open ~/.claude/mcp/ai-designer/style-gallery.html
 ```
 
 **Server not running?**
 ```bash
-node ~/.qwen/mcp/ai-designer/server.js
+node ~/.claude/mcp/ai-designer/server.js
 # Should see: "AI Designer MCP Server v2.0 running on stdio"
 ```
 
 ---
 
-_Universal MCP: Works with Claude Code, Qwen Code, Gemini CLI_
+_Universal MCP: Works with Claude Code, Gemini CLI_

@@ -1,0 +1,122 @@
+[
+  {
+    "name": "database-migrations",
+    "stars": 162855,
+    "desc": "Şema değişiklikleri, veri migration'ları, rollback'ler ve PostgreSQL, MySQL ve yaygın ORM'ler (Prisma, Drizzle, Django, TypeORM, golang-migrate) arasında sıfır ",
+    "url": "https://github.com/affaan-m/everything-claude-code/tree/main/docs/tr/skills/database-migrations"
+  },
+  {
+    "name": "golang-patterns",
+    "stars": 162855,
+    "desc": "견고하고 효율적이며 유지보수 가능한 Go 애플리케이션 구축을 위한 관용적 Go 패턴, 모범 사례 및 규칙.",
+    "url": "https://github.com/affaan-m/everything-claude-code/tree/main/docs/ko-KR/skills/golang-patterns"
+  },
+  {
+    "name": "golang-testing",
+    "stars": 162855,
+    "desc": "테이블 주도 테스트, 서브테스트, 벤치마크, 퍼징, 테스트 커버리지를 포함한 Go 테스팅 패턴. 관용적 Go 관행과 함께 TDD 방법론을 따릅니다.",
+    "url": "https://github.com/affaan-m/everything-claude-code/tree/main/docs/ko-KR/skills/golang-testing"
+  },
+  {
+    "name": "nestjs-patterns",
+    "stars": 162855,
+    "desc": "NestJS architecture patterns for modules, controllers, providers, DTO validation, guards, interceptors, config, and production-grade TypeScript backends.",
+    "url": "https://github.com/affaan-m/everything-claude-code/tree/main/skills/nestjs-patterns"
+  },
+  {
+    "name": "postgres-patterns",
+    "stars": 162855,
+    "desc": "PostgreSQL database patterns for query optimization, schema design, indexing, and security. Based on Supabase best practices.",
+    "url": "https://github.com/affaan-m/everything-claude-code/tree/main/skills/postgres-patterns"
+  },
+  {
+    "name": "fastapi",
+    "stars": 97457,
+    "desc": "FastAPI best practices and conventions. Use when working with FastAPI APIs and Pydantic models for them. Keeps FastAPI code clean and up to date with the latest",
+    "url": "https://github.com/fastapi/fastapi/tree/master/fastapi/.agents/skills/fastapi"
+  },
+  {
+    "name": "syncable-entity-types-and-constants",
+    "stars": 44817,
+    "desc": "Define types, entities, and central constant registrations for syncable entities in Twenty's workspace migration system. Use when creating new syncable entities",
+    "url": "https://github.com/twentyhq/twenty/tree/main/.cursor/skills/syncable-entity-types-and-constants"
+  },
+  {
+    "name": "graphql",
+    "stars": 34395,
+    "desc": "GraphQL gives clients exactly the data they need - no more, no less. One endpoint, typed schema, introspection. But the flexibility that makes it powerful also ",
+    "url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/plugins/antigravity-awesome-skills-claude/skills/graphql"
+  },
+  {
+    "name": "microservices-patterns",
+    "stars": 34395,
+    "desc": "Master microservices architecture patterns including service boundaries, inter-service communication, data management, and resilience patterns for building dist",
+    "url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/plugins/antigravity-awesome-skills-claude/skills/microservices-patterns"
+  },
+  {
+    "name": "postgres-best-practices",
+    "stars": 34395,
+    "desc": "Postgres performance optimization and best practices from Supabase. Use this skill when writing, reviewing, or optimizing Postgres queries, schema designs, or d",
+    "url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/plugins/antigravity-awesome-skills-claude/skills/postgres-best-practices"
+  },
+  {
+    "name": "postgresql",
+    "stars": 34395,
+    "desc": "Design a PostgreSQL-specific schema. Covers best-practices, data types, indexing, constraints, performance patterns, and advanced features",
+    "url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/postgresql"
+  },
+  {
+    "name": "fastapi-templates",
+    "stars": 34024,
+    "desc": "Create production-ready FastAPI projects with async patterns, dependency injection, and comprehensive error handling. Use when building new FastAPI applications",
+    "url": "https://github.com/wshobson/agents/tree/main/plugins/api-scaffolding/skills/fastapi-templates"
+  },
+  {
+    "name": "postgresql-table-design",
+    "stars": 34024,
+    "desc": "Use this skill when designing or reviewing a PostgreSQL-specific schema. Covers best-practices, data types, indexing, constraints, performance patterns, and adv",
+    "url": "https://github.com/wshobson/agents/tree/main/plugins/database-design/skills/postgresql"
+  },
+  {
+    "name": "rest-api-caller",
+    "stars": 32797,
+    "desc": "Call REST APIs from Python, parse JSON responses, and report the useful fields back to the user.",
+    "url": "https://github.com/OpenBMB/ChatDev/tree/main/.agents/skills/rest-api-caller"
+  },
+  {
+    "name": "postgresql-code-review",
+    "stars": 30641,
+    "desc": "PostgreSQL-specific code review assistant focusing on PostgreSQL best practices, anti-patterns, and unique quality standards. Covers JSONB operations, array usa",
+    "url": "https://github.com/github/awesome-copilot/tree/main/skills/postgresql-code-review"
+  },
+  {
+    "name": "postgresql-optimization",
+    "stars": 30641,
+    "desc": "PostgreSQL-specific development assistant focusing on unique PostgreSQL features, advanced data types, and PostgreSQL-exclusive capabilities. Covers JSONB opera",
+    "url": "https://github.com/github/awesome-copilot/tree/main/skills/postgresql-optimization"
+  },
+  {
+    "name": "fastapi-endpoint",
+    "stars": 24819,
+    "desc": "Plan and build production-ready FastAPI endpoints with async SQLAlchemy, Pydantic v2 models, dependency injection for auth, and pytest tests. Uses interview-dri",
+    "url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/web-development/fastapi-endpoint"
+  },
+  {
+    "name": "postgres-schema-design",
+    "stars": 24819,
+    "desc": "Comprehensive PostgreSQL-specific table design reference covering data types, indexing, constraints, performance patterns, and advanced features",
+    "url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/database/postgres-schema-design"
+  },
+  {
+    "name": "db-migration",
+    "stars": 21795,
+    "desc": "Creates TypeORM database migrations for the Activepieces server. Use when the user asks to add a column, create a table, add an index, or make any schema change",
+    "url": "https://github.com/activepieces/activepieces/tree/main/.agents/skills/db-migration"
+  },
+  {
+    "name": "fastapi-sdk",
+    "stars": 19643,
+    "desc": "Official FastAPI skill to write code with best practices, keeping up to date with new versions and features.",
+    "url": "https://github.com/kortix-ai/suna/tree/main/core/kortix-master/opencode/skills/GENERAL-KNOWLEDGE-WORKER/fastapi-sdk"
+  }
+]

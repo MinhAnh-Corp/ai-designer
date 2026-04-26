@@ -1,8 +1,8 @@
 # AI Designer MCP
 
-Design beautiful UIs with **React + Tailwind CSS + Ant Design** using Qwen Code or Gemini CLI.
+Design beautiful UIs with **React + Tailwind CSS + Ant Design** using Claude Code or Gemini CLI.
 
-> **⚠️ Hooks format (array required) — read before editing `settings.json` / `settings.claude.json`**
+> **⚠️ Hooks format (array required) — read before editing `settings.json`**
 >
 > Claude Code validates hooks strictly. The inner `hooks` field **must be an array** of `{type, command}` objects. Putting `command` directly under the matcher causes a validation error like *"only accept array"* and the settings file fails to load on a fresh machine.
 >
@@ -33,7 +33,7 @@ Design beautiful UIs with **React + Tailwind CSS + Ant Design** using Qwen Code 
 > claude mcp list   # should show ✓ Connected
 > ```
 >
-> Qwen shares the same server by adding the identical `mcpServers` entry in `~/.qwen/settings.json` (Qwen does read `mcpServers` from its settings file — Claude does not).
+> Gemini CLI uses the same `server.js` — `setup.sh` installs it to `~/.gemini/mcp/ai-designer/`.
 
 
 ## Features
@@ -55,7 +55,7 @@ cd <PROJECT_ROOT>/ai-agents/ai-designer
 bash setup.sh
 ```
 
-### 2. Restart Qwen Code
+### 2. Restart Claude Code (and Gemini CLI)
 
 The MCP server will load automatically.
 
@@ -139,8 +139,7 @@ Target: Dashboard layout with sidebar, header, content area
 ai-designer/
 ├── server.js          # MCP server
 ├── package.json       # Dependencies
-├── QWEN.md           # Qwen Code config
-├── settings.json      # MCP registration template
+├── settings.json      # Claude Code MCP + hooks template
 ├── setup.sh          # Install script
 ├── commands/
 │   └── design.md     # Design skill
@@ -163,8 +162,7 @@ cd <PROJECT_ROOT>/ai-agents/ai-designer && npm install
 
 **Settings not merged?**
 ```bash
-# Manual merge
-# Add to ~/.qwen/settings.json:
+# Manual merge — add to ~/.claude/settings.json:
 "mcpServers": {
   "ai-designer": {
     "command": "node",
@@ -175,4 +173,4 @@ cd <PROJECT_ROOT>/ai-agents/ai-designer && npm install
 
 ---
 
-_React + Tailwind CSS + Ant Design | Powered by Qwen Code_
+_React + Tailwind CSS + Ant Design | Powered by Claude Code + Gemini CLI_
